@@ -2,7 +2,6 @@ import java.util.*;
 
 public class LinkedList<T> implements List<T>, Deque<T> {
 
-    Node<T> head; // head of list
     Node<T> first; //first element
     Node<T> last; //last element
     int size = 0; //size of list
@@ -141,7 +140,7 @@ public class LinkedList<T> implements List<T>, Deque<T> {
     public boolean add(T t) {
         Node<T> new_node = new Node<T>(t);
         if(this.isEmpty()){
-            this.head = new_node;
+            this.first = new_node;
             first = new_node;
         }
         else{
@@ -181,7 +180,7 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
         if (prev == null) {
             first = next;
-            head = node.next;
+            first = node.next;
         } else {
             prev.next = next;
             node.prev = null;
@@ -260,7 +259,7 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
         Node<T> node;
         if (index < size-1) {
-            node = head;
+            node = first;
         for (int i = 0; i < index; i++)
             node = node.next;
         } else {
