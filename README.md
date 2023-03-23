@@ -1,0 +1,20 @@
+Methods:
+- ```size()``` - returns the size of the list
+- ```isEmpty()``` - defines an empty list
+- ```contains()``` - return the presence of an object in the list.
+- ```element()``` - return the first element
+- ```getFirst()``` - returns the first object in the list
+- ```getLast()``` - returns the last object in the list
+- ```addFirst()``` - adds the object first to the list
+- ```addLast()``` - adds the object last to the list
+- ```add(int index)``` - adds an object to the list by index
+- ```add(T t)``` - adds an object to the list as last
+- ```removeFirst()``` - deletes the first object in the list
+- ```removeLast()``` - deletes the last object in the list
+- ```remove(int index)``` - deletes an object in the list by index
+- ```remove(Object o)``` - deletes an object in the list by data
+- ```containsAll(Collection<?> c)``` - check contains of all elements in the List
+- ```Node<T> node(int index)``` - service method. Return node object by index
+- ```get(int index)``` - get data from list by index
+- ```add(int index, T element)``` - add element before index
+- ```indexOf(Object o)``` - return index of element
