@@ -200,8 +200,8 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        for(int i = 0; i<c.size()-1;i++){
-            if(contains(c)){
+        for(int i = 0; i<c.size();i++){
+            if(contains(c.toArray()[i])){
                 continue;
             }
             else{
