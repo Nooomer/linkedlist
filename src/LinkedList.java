@@ -36,7 +36,7 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        return indexOf(o) != -1;
     }
     @Override
     public T element() {
@@ -50,12 +50,12 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
     @Override
     public void addFirst(T t) {
-
+        add(0,t);
     }
 
     @Override
     public void addLast(T t) {
-
+        add(t);
     }
 
     @Override
@@ -201,7 +201,15 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        for(int i = 0; i<c.size()-1;i++){
+            if(contains(c)){
+                continue;
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
